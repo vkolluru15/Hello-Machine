@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Python Flask Bucket List App</title>
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../static/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/signup.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <table class="table">
+            <thead>
+              <tr class="something">
+                <td class="col-md-2">Date</td>
+                <td class="col-md-2">Temparature</td>
+                <td class="col-md-2">Avg Temp</td>
+                <td class="col-md-2">Humidity</td>
+                <td class="col-md-2">Windspeed</td>
+              </tr>
+            </thead>
+            <tbody>
+              {% for item in data %}
+
+                  <tr>
+                        {% for d in item %}
+                        <td class="col-md-2">{{ d }}</td>
+                        {% endfor %}
+                        
+                  </tr>
+              {% endfor %}
+        </tbody>
+
+        </nav>
+        <h3 class="text-muted">Python Flask App</h3>
+      </div>
+
+
+
+    </div>
+  </body>
+</html>
